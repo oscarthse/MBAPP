@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31C6B7582C20603700497B05 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C6B7572C20603700497B05 /* UserProfile.swift */; };
+		31C6B75A2C20604800497B05 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C6B7592C20604800497B05 /* UserProfileView.swift */; };
+		31C6B75C2C20606800497B05 /* ContactsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C6B75B2C20606800497B05 /* ContactsManager.swift */; };
+		31C6B75E2C20608B00497B05 /* BumpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C6B75D2C20608B00497B05 /* BumpManager.swift */; };
+		31C6B7602C20613A00497B05 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 31C6B75F2C20613A00497B05 /* FirebaseAuthCombine-Community */; };
+		31C6B7622C2061D000497B05 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 31C6B7612C2061D000497B05 /* FirebaseStorage */; };
+		31C6B7642C2062D800497B05 /* FriendsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C6B7632C2062D800497B05 /* FriendsViewModel.swift */; };
+		31C6B7662C20631100497B05 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C6B7652C20631100497B05 /* ImagePicker.swift */; };
+		31C6B7682C2064F000497B05 /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C6B7672C2064F000497B05 /* UserProfileViewModel.swift */; };
 		64CFB15B2C20442A00AAAF58 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CFB15A2C20442A00AAAF58 /* CalendarView.swift */; };
 		EA0C4F902C17BACB00091832 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C4F8F2C17BACB00091832 /* MainView.swift */; };
 		EA0C4F922C17BACC00091832 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA0C4F912C17BACC00091832 /* Assets.xcassets */; };
@@ -29,6 +38,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		31C6B7572C20603700497B05 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		31C6B7592C20604800497B05 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		31C6B75B2C20606800497B05 /* ContactsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsManager.swift; sourceTree = "<group>"; };
+		31C6B75D2C20608B00497B05 /* BumpManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BumpManager.swift; sourceTree = "<group>"; };
+		31C6B7632C2062D800497B05 /* FriendsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewModel.swift; sourceTree = "<group>"; };
+		31C6B7652C20631100497B05 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		31C6B7672C2064F000497B05 /* UserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
 		64CFB15A2C20442A00AAAF58 /* CalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		EA0C4F8A2C17BACB00091832 /* MBAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MBAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA0C4F8F2C17BACB00091832 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -56,6 +72,8 @@
 				EA0C4FCD2C17C64F00091832 /* FirebaseFirestoreSwift in Frameworks */,
 				EA0C4FB92C17C64E00091832 /* FirebaseAppCheck in Frameworks */,
 				EA0C4FBD2C17C64E00091832 /* FirebaseAuth in Frameworks */,
+				31C6B7602C20613A00497B05 /* FirebaseAuthCombine-Community in Frameworks */,
+				31C6B7622C2061D000497B05 /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,10 +104,17 @@
 				EA0C4F8F2C17BACB00091832 /* MainView.swift */,
 				64CFB15A2C20442A00AAAF58 /* CalendarView.swift */,
 				EA0C4FE82C17CA1300091832 /* Coordinate.swift */,
+				31C6B7572C20603700497B05 /* UserProfile.swift */,
 				EA0C4F9D2C17BCB800091832 /* EventCreatorView.swift */,
+				31C6B7632C2062D800497B05 /* FriendsViewModel.swift */,
 				EA0C4F9F2C17BD2D00091832 /* FriendsView.swift */,
+				31C6B7592C20604800497B05 /* UserProfileView.swift */,
+				31C6B75B2C20606800497B05 /* ContactsManager.swift */,
 				EA0C4FA82C17C4A500091832 /* AppDelegate.swift */,
+				31C6B7652C20631100497B05 /* ImagePicker.swift */,
+				31C6B7672C2064F000497B05 /* UserProfileViewModel.swift */,
 				EA0C4FEC2C187AF400091832 /* YourApp.swift */,
+				31C6B75D2C20608B00497B05 /* BumpManager.swift */,
 				EA0C4FAA2C17C4C600091832 /* AuthViewModel.swift */,
 				EA0C4FAC2C17C4E600091832 /* Event.swift */,
 				EA0C4FAE2C17C4FC00091832 /* EventViewModel.swift */,
@@ -129,6 +154,8 @@
 				EA0C4FBC2C17C64E00091832 /* FirebaseAuth */,
 				EA0C4FC82C17C64E00091832 /* FirebaseFirestore */,
 				EA0C4FCC2C17C64E00091832 /* FirebaseFirestoreSwift */,
+				31C6B75F2C20613A00497B05 /* FirebaseAuthCombine-Community */,
+				31C6B7612C2061D000497B05 /* FirebaseStorage */,
 			);
 			productName = MBAPP;
 			productReference = EA0C4F8A2C17BACB00091832 /* MBAPP.app */;
@@ -189,17 +216,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA0C4F902C17BACB00091832 /* MainView.swift in Sources */,
+				31C6B75C2C20606800497B05 /* ContactsManager.swift in Sources */,
 				EA0C4FAD2C17C4E600091832 /* Event.swift in Sources */,
+				31C6B7662C20631100497B05 /* ImagePicker.swift in Sources */,
 				64CFB15B2C20442A00AAAF58 /* CalendarView.swift in Sources */,
 				EA0C4FAF2C17C4FC00091832 /* EventViewModel.swift in Sources */,
 				EA0C4FA92C17C4A500091832 /* AppDelegate.swift in Sources */,
 				EA0C4FA22C17BD9200091832 /* ContentView.swift in Sources */,
 				EA0C4FAB2C17C4C600091832 /* AuthViewModel.swift in Sources */,
+				31C6B75A2C20604800497B05 /* UserProfileView.swift in Sources */,
 				EA0C4F9E2C17BCB800091832 /* EventCreatorView.swift in Sources */,
 				EA0C4F9C2C17BC4B00091832 /* LoginView.swift in Sources */,
+				31C6B75E2C20608B00497B05 /* BumpManager.swift in Sources */,
+				31C6B7682C2064F000497B05 /* UserProfileViewModel.swift in Sources */,
 				EA0C4FA02C17BD2D00091832 /* FriendsView.swift in Sources */,
+				31C6B7642C2062D800497B05 /* FriendsViewModel.swift in Sources */,
 				EA0C4FED2C187AF400091832 /* YourApp.swift in Sources */,
 				EA0C4FE92C17CA1300091832 /* Coordinate.swift in Sources */,
+				31C6B7582C20603700497B05 /* UserProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +450,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		31C6B75F2C20613A00497B05 /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = "FirebaseAuthCombine-Community";
+		};
+		31C6B7612C2061D000497B05 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FirebaseStorage;
+		};
 		EA0C4FB82C17C64E00091832 /* FirebaseAppCheck */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = EA0C4FA72C17C48D00091832 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

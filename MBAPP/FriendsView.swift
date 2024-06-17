@@ -1,49 +1,56 @@
 import SwiftUI
-import FirebaseFirestore
-
-struct Friend: Identifiable {
-    var id: String
-    var name: String
-}
-
-class FriendsViewModel: ObservableObject {
-    @Published var friends: [Friend] = []
-
-    private var db = Firestore.firestore()
-
-    func fetchFriends() {
-        db.collection("friends").addSnapshotListener { (querySnapshot, error) in
-            guard let documents = querySnapshot?.documents else {
-                print("No documents")
-                return
-            }
-            self.friends = documents.compactMap { queryDocumentSnapshot -> Friend? in
-                let data = queryDocumentSnapshot.data()
-                let id = queryDocumentSnapshot.documentID
-                let name = data["name"] as? String ?? ""
-                return Friend(id: id, name: name)
-            }
-        }
-    }
-}
-
-//Test git
+import FirebaseAuth
 
 struct FriendsView: View {
     @StateObject var friendsViewModel = FriendsViewModel()
+    @State private var showProfileView = false
+    @State private var bumpManager = BumpManager()
 
     var body: some View {
         VStack {
+            Text("Bump your iPhones to add friends when in this page.")
+                .font(.headline)
+                .padding()
+
             List(friendsViewModel.friends) { friend in
-                Text(friend.name)
-                    .padding()
-                    .background(Color(.secondarySystemBackground))
-                    .cornerRadius(5.0)
+                HStack {
+                    if let photoURL = friend.photoURL, let url = URL(string: photoURL) {
+                        AsyncImage(url: url) { image in
+                            image.resizable()
+                        } placeholder: {
+                            Image(systemName: "person.circle")
+                        }
+                        .frame(width: 50, height: 50)
+                        .clipShape(Circle())
+                    }
+                    VStack(alignment: .leading) {
+                        Text(friend.name)
+                        Text(friend.description)
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
+                    }
+                }
+                .padding()
+                .background(Color(.secondarySystemBackground))
+                .cornerRadius(5.0)
             }
+            .onAppear {
+                friendsViewModel.fetchFriends()
+            }
+            .padding()
+
+            Button("Show Profile") {
+                showProfileView = true
+            }
+            .padding()
+            .sheet(isPresented: $showProfileView) {
+                UserProfileView(userID: Auth.auth().currentUser?.uid ?? "")
+            }
+
+            Button("Bump to Add Friend") {
+                bumpManager.beginSession()
+            }
+            .padding()
         }
-        .onAppear {
-            friendsViewModel.fetchFriends()
-        }
-        .padding()
     }
 }

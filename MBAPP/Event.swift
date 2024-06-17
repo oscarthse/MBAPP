@@ -10,4 +10,3 @@ struct Event: Identifiable, Codable {
     var location: GeoPoint
     var description: String
 }
-

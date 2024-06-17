@@ -11,14 +11,12 @@ struct CalendarView: View {
 
     var body: some View {
         VStack {
-            // Month and Year Header
             HStack {
                 Text("\(monthYearString(from: selectedDate))")
                     .font(.largeTitle)
                     .padding()
                 Spacer()
             }
-            // Days of the Week Header
             HStack {
                 ForEach(calendar.shortWeekdaySymbols, id: \.self) { day in
                     Text(day)
@@ -28,7 +26,6 @@ struct CalendarView: View {
             }
             .padding(.horizontal)
 
-            // Calendar Grid
             LazyVGrid(columns: columns, spacing: 15) {
                 ForEach(daysInMonth(for: selectedDate), id: \.self) { date in
                     Text("\(dayString(from: date))")
@@ -44,7 +41,6 @@ struct CalendarView: View {
             }
             .padding()
 
-            // Events for Selected Date
             List {
                 ForEach(eventsForSelectedDate, id: \.id) { event in
                     Text(event.description)
@@ -82,4 +78,3 @@ struct CalendarView: View {
         calendar.isDate(date1, inSameDayAs: date2)
     }
 }
-
