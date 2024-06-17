@@ -27,6 +27,8 @@ class FriendsViewModel: ObservableObject {
     }
 }
 
+//Test git
+
 struct FriendsView: View {
     @StateObject var friendsViewModel = FriendsViewModel()
 
