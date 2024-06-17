@@ -15,15 +15,17 @@
 	<key>STORAGE_BUCKET</key>
 	<string>mbapp-b0f93.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
+	<key>NSContactsUsageDescription</key>
+	<string>We need access to your contacts to find friends who are using the app.</string>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:312135412402:ios:5ddd00790736e90228b7ab</string>
 </dict>

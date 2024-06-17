@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		313EB7132C2083C900C286D2 /* AddFriendsFromContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313EB7122C2083C900C286D2 /* AddFriendsFromContactsView.swift */; };
+		313EB7172C208BA500C286D2 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313EB7162C208BA500C286D2 /* CustomButton.swift */; };
+		313EB7192C20995200C286D2 /* GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313EB7182C20995200C286D2 /* GradientBackground.swift */; };
+		313EB71B2C20996800C286D2 /* BlurredCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313EB71A2C20996800C286D2 /* BlurredCard.swift */; };
+		313EB71D2C20997400C286D2 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313EB71C2C20997400C286D2 /* BlurView.swift */; };
+		313EB71F2C209CED00C286D2 /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313EB71E2C209CED00C286D2 /* CustomButtonStyle.swift */; };
+		313EB7212C209D9E00C286D2 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313EB7202C209D9E00C286D2 /* Friend.swift */; };
 		31C6B7582C20603700497B05 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C6B7572C20603700497B05 /* UserProfile.swift */; };
 		31C6B75A2C20604800497B05 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C6B7592C20604800497B05 /* UserProfileView.swift */; };
 		31C6B75C2C20606800497B05 /* ContactsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C6B75B2C20606800497B05 /* ContactsManager.swift */; };
@@ -38,6 +45,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		313EB7122C2083C900C286D2 /* AddFriendsFromContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendsFromContactsView.swift; sourceTree = "<group>"; };
+		313EB7162C208BA500C286D2 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		313EB7182C20995200C286D2 /* GradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackground.swift; sourceTree = "<group>"; };
+		313EB71A2C20996800C286D2 /* BlurredCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurredCard.swift; sourceTree = "<group>"; };
+		313EB71C2C20997400C286D2 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		313EB71E2C209CED00C286D2 /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
+		313EB7202C209D9E00C286D2 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		31C6B7572C20603700497B05 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		31C6B7592C20604800497B05 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		31C6B75B2C20606800497B05 /* ContactsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsManager.swift; sourceTree = "<group>"; };
@@ -101,17 +115,24 @@
 			children = (
 				EA0C4FA12C17BD9200091832 /* ContentView.swift */,
 				EA0C4F9B2C17BC4B00091832 /* LoginView.swift */,
+				313EB7162C208BA500C286D2 /* CustomButton.swift */,
+				313EB7182C20995200C286D2 /* GradientBackground.swift */,
 				EA0C4F8F2C17BACB00091832 /* MainView.swift */,
 				64CFB15A2C20442A00AAAF58 /* CalendarView.swift */,
 				EA0C4FE82C17CA1300091832 /* Coordinate.swift */,
+				313EB71C2C20997400C286D2 /* BlurView.swift */,
 				31C6B7572C20603700497B05 /* UserProfile.swift */,
+				313EB71E2C209CED00C286D2 /* CustomButtonStyle.swift */,
 				EA0C4F9D2C17BCB800091832 /* EventCreatorView.swift */,
 				31C6B7632C2062D800497B05 /* FriendsViewModel.swift */,
+				313EB71A2C20996800C286D2 /* BlurredCard.swift */,
 				EA0C4F9F2C17BD2D00091832 /* FriendsView.swift */,
 				31C6B7592C20604800497B05 /* UserProfileView.swift */,
+				313EB7202C209D9E00C286D2 /* Friend.swift */,
 				31C6B75B2C20606800497B05 /* ContactsManager.swift */,
 				EA0C4FA82C17C4A500091832 /* AppDelegate.swift */,
 				31C6B7652C20631100497B05 /* ImagePicker.swift */,
+				313EB7122C2083C900C286D2 /* AddFriendsFromContactsView.swift */,
 				31C6B7672C2064F000497B05 /* UserProfileViewModel.swift */,
 				EA0C4FEC2C187AF400091832 /* YourApp.swift */,
 				31C6B75D2C20608B00497B05 /* BumpManager.swift */,
@@ -218,16 +239,23 @@
 				EA0C4F902C17BACB00091832 /* MainView.swift in Sources */,
 				31C6B75C2C20606800497B05 /* ContactsManager.swift in Sources */,
 				EA0C4FAD2C17C4E600091832 /* Event.swift in Sources */,
+				313EB71B2C20996800C286D2 /* BlurredCard.swift in Sources */,
 				31C6B7662C20631100497B05 /* ImagePicker.swift in Sources */,
 				64CFB15B2C20442A00AAAF58 /* CalendarView.swift in Sources */,
+				313EB7192C20995200C286D2 /* GradientBackground.swift in Sources */,
 				EA0C4FAF2C17C4FC00091832 /* EventViewModel.swift in Sources */,
 				EA0C4FA92C17C4A500091832 /* AppDelegate.swift in Sources */,
 				EA0C4FA22C17BD9200091832 /* ContentView.swift in Sources */,
 				EA0C4FAB2C17C4C600091832 /* AuthViewModel.swift in Sources */,
+				313EB7212C209D9E00C286D2 /* Friend.swift in Sources */,
 				31C6B75A2C20604800497B05 /* UserProfileView.swift in Sources */,
+				313EB7132C2083C900C286D2 /* AddFriendsFromContactsView.swift in Sources */,
 				EA0C4F9E2C17BCB800091832 /* EventCreatorView.swift in Sources */,
+				313EB7172C208BA500C286D2 /* CustomButton.swift in Sources */,
 				EA0C4F9C2C17BC4B00091832 /* LoginView.swift in Sources */,
 				31C6B75E2C20608B00497B05 /* BumpManager.swift in Sources */,
+				313EB71F2C209CED00C286D2 /* CustomButtonStyle.swift in Sources */,
+				313EB71D2C20997400C286D2 /* BlurView.swift in Sources */,
 				31C6B7682C2064F000497B05 /* UserProfileViewModel.swift in Sources */,
 				EA0C4FA02C17BD2D00091832 /* FriendsView.swift in Sources */,
 				31C6B7642C2062D800497B05 /* FriendsViewModel.swift in Sources */,
@@ -369,6 +397,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MBAPP/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSContactsUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -397,6 +426,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MBAPP/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSContactsUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

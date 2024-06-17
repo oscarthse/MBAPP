@@ -1,33 +1,34 @@
+import SwiftUI
 import Contacts
 
-class ContactsManager {
-    let store = CNContactStore()
-    var friendsViewModel = FriendsViewModel()
+class ContactsManager: ObservableObject {
+    @Published var contacts = [CNContact]()
 
-    func requestAccess(completion: @escaping (Bool) -> Void) {
+    func requestAccess() {
+        let store = CNContactStore()
         store.requestAccess(for: .contacts) { granted, error in
-            completion(granted)
+            if granted {
+                self.fetchContacts()
+            } else {
+                print("Access denied")
+            }
         }
     }
 
-    func fetchContacts(completion: @escaping ([CNContact]) -> Void) {
-        var contacts: [CNContact] = []
-        let keys = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactPhoneNumbersKey]
-        let request = CNContactFetchRequest(keysToFetch: keys as [CNKeyDescriptor])
-
+    private func fetchContacts() {
+        let store = CNContactStore()
+        let keys = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactPhoneNumbersKey] as [CNKeyDescriptor]
+        let request = CNContactFetchRequest(keysToFetch: keys)
         do {
+            var contacts = [CNContact]()
             try store.enumerateContacts(with: request) { contact, stop in
                 contacts.append(contact)
             }
-            completion(contacts)
+            DispatchQueue.main.async {
+                self.contacts = contacts
+            }
         } catch {
-            print("Failed to fetch contact, error: \(error)")
-            completion([])
+            print("Failed to fetch contacts: \(error)")
         }
-    }
-
-    func findAppUsers(contacts: [CNContact], completion: @escaping ([Friend]) -> Void) {
-        let phoneNumbers = contacts.flatMap { $0.phoneNumbers.map { $0.value.stringValue } }
-        friendsViewModel.fetchUsersByPhoneNumbers(phoneNumbers: phoneNumbers, completion: completion)
     }
 }

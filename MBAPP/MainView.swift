@@ -12,71 +12,59 @@ struct MainView: View {
     @State private var selectedDate = Date()
     
     var body: some View {
-        NavigationView {
+        ZStack {
+            GradientBackground()
             VStack {
                 Map(coordinateRegion: $region, interactionModes: .all, showsUserLocation: true, annotationItems: eventViewModel.events) { event in
                     MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: event.location.latitude, longitude: event.location.longitude)) {
                         VStack {
                             Image(systemName: "mappin.circle.fill")
                                 .resizable()
-                                .frame(width: 30, height: 30)
+                                .frame(width: 20, height: 20) // Reduce the size
                                 .foregroundColor(.red)
                             Text(event.description)
-                                .font(.caption)
-                                .padding(5)
-                                .background(Color.white)
-                                .cornerRadius(10)
-                                .shadow(radius: 5)
+                                .font(.caption2) // Use a smaller font
+                                .padding(3) // Reduce padding
+                                .background(Color.white.opacity(0.7))
+                                .cornerRadius(5) // Reduce corner radius
+                                .shadow(radius: 2) // Reduce shadow
                         }
+                        .frame(width: 80) // Set a fixed width to keep it consistent
                     }
                 }
                 .frame(height: 600)
                 
                 HStack {
-                    CustomButton(text: "Friends") {
+                    Button("Friends") {
                         showFriendsList = true
                     }
+                    .buttonStyle(CustomButtonStyle())
                     .sheet(isPresented: $showFriendsList) {
                         FriendsView()
                     }
                     
-                    CustomButton(text: "Launch") {
+                    Button("Launch") {
                         showEventCreator = true
                     }
+                    .buttonStyle(CustomButtonStyle())
                     .sheet(isPresented: $showEventCreator) {
                         EventCreatorView(eventViewModel: eventViewModel)
                     }
                     
-                    CustomButton(text: "Calendar") {
+                    Button("Calendar") {
                         showCalendar = true
                     }
+                    .buttonStyle(CustomButtonStyle())
                     .sheet(isPresented: $showCalendar) {
                         CalendarView(selectedDate: $selectedDate, events: $eventViewModel.events)
                     }
                 }
                 .padding()
             }
-            .navigationBarHidden(true)
-            .onAppear {
-                eventViewModel.fetchEvents()
-            }
         }
-    }
-}
-
-struct CustomButton: View {
-    let text: String
-    let action: () -> Void
-    
-    var body: some View {
-        Button(action: action) {
-            Text(text)
-                .foregroundColor(.white)
-                .padding()
-                .background(Color("customPurple"))
-                .cornerRadius(10)
-                .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.black, lineWidth: 1))
+        .navigationBarHidden(true)
+        .onAppear {
+            eventViewModel.fetchEvents()
         }
-        .padding(.horizontal)
     }
 }
